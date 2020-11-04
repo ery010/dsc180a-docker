@@ -23,7 +23,8 @@ RUN	apt-get -y install traceroute
 
 # 3) install packages
 RUN pip install --no-cache-dir networkx scipy python-louvain
-RUN conda install --yes geopandas babypandas
+RUN pip install --no-cache-dir geopandas
+RUN pip install --no-cache-dir babypandas
 
 # 4) change back to notebook user
 COPY /run_jupyter.sh /
